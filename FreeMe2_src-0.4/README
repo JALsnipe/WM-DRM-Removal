@@ -1,0 +1,16 @@
+Currently FreeMe2 support three options: v,s and 2. Any combination of those is valid.
+v - verbose mode
+s - ask for SID
+2 - use FreeMe2 orignal decryption engine (by default we use MPlayers one).
+
+Example configurations:
+Decrypt file;
+./FreeMe2 some_file
+Decrypt file in verbose mode;
+./FreeMe2 -v some_file
+Decrypt file but force program to ask for sid;
+./FreeMe2 -s some_file
+Decrypt file but force program to ask for sid in verbose mode;
+./FreeMe2 -vs some_file
+Decrypt file but force program to ask for sid in verbose mode using FreeMe2 decryption engine.
+./FreeMe2 -vs2 some_file

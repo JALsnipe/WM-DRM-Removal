@@ -1,0 +1,34 @@
+#                                               -*- Autoconf -*-
+# Process this file with autoconf to produce a configure script.
+
+AC_PREREQ(2.60)
+AC_INIT(FreeMe2, 0.2)
+AC_CONFIG_SRCDIR([ecc.c])
+AM_CONFIG_HEADER([config.h])
+
+AM_INIT_AUTOMAKE(FreeMe2, 0.2)
+# Checks for programs.
+AC_PROG_CC
+
+# Checks for libraries.
+AC_CHECK_LIB([crypto], [main])
+AC_CHECK_LIB([eay32], [main])
+
+# Checks for header files.
+AC_HEADER_STDC
+AC_CHECK_HEADERS([stdlib.h string.h wchar.h wctype.h])
+
+# Checks for typedefs, structures, and compiler characteristics.
+AC_TYPE_UINT32_T
+AC_TYPE_UINT64_T
+
+# Checks for machine endianness
+AC_C_BIGENDIAN
+
+# Checks for library functions.
+AC_FUNC_MALLOC
+AC_FUNC_MEMCMP
+AC_CHECK_FUNCS([memset strrchr])
+
+AC_CONFIG_FILES([Makefile])
+AC_OUTPUT
